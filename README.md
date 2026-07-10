@@ -1,2 +1,1 @@
-# Academic-Resume
-Academic Portfolio of Liu Wanhua | Engineering Cost | Scientific Research &amp; Publications
+将你的照片命名为 avatar.jpg 放入 images，将校徽命名为 sicau-logo.png 放入 images。

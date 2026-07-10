@@ -1,0 +1,1240 @@
+/* ===========================
+   基础设置
+=========================== */
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+html{
+    scroll-behavior:smooth;
+}
+
+body{
+
+    font-family:"Microsoft YaHei","PingFang SC",sans-serif;
+
+    background:linear-gradient(135deg,#F6FBF7 0%,#EEF8F2 60%,#FFFFFF 100%);
+
+    overflow-x:hidden;
+
+    color:#1b4332;
+
+    position:relative;
+
+}
+
+/* ===========================
+   鼠标光晕
+=========================== */
+
+.light{
+
+    position:fixed;
+
+    width:450px;
+
+    height:450px;
+
+    border-radius:50%;
+
+    pointer-events:none;
+
+    background:radial-gradient(circle,
+    rgba(82,183,136,.18),
+    rgba(82,183,136,.08),
+    transparent 72%);
+
+    filter:blur(30px);
+
+    transform:translate(-50%,-50%);
+
+    z-index:0;
+
+}
+
+/* ===========================
+   Hero
+=========================== */
+
+.hero{
+
+    width:100%;
+
+    min-height:100vh;
+
+    display:flex;
+
+    justify-content:space-between;
+
+    align-items:center;
+
+    padding:0 8%;
+
+    position:relative;
+
+    z-index:2;
+
+}
+
+/* 左边 */
+
+.hero-left{
+
+    width:52%;
+
+}
+
+/* 校徽 */
+
+.school-logo{
+
+    width:140px;
+
+    position:absolute;
+
+    top:-40px;
+
+    right:40px;
+
+    z-index:5;
+
+    transition:.4s;
+
+    filter:drop-shadow(0 10px 20px rgba(0,0,0,.15));
+
+}
+
+.school-logo:hover{
+
+    transform:scale(1.08) rotate(-5deg);
+
+}
+
+/* 标签 */
+
+.tag{
+
+    display:inline-block;
+
+    background:#E7F7EC;
+
+    color:#2D6A4F;
+
+    padding:10px 22px;
+
+    border-radius:30px;
+
+    font-size:18px;
+
+    margin-bottom:30px;
+
+}
+
+/* 姓名 */
+
+.hero-left h1{
+
+    font-size:78px;
+
+    color:#163C2D;
+
+    margin-bottom:18px;
+
+    font-weight:800;
+
+}
+
+/* 学校 */
+
+.hero-left h2{
+
+    font-size:36px;
+
+    font-weight:600;
+
+    margin-bottom:8px;
+
+}
+
+.hero-left h3{
+
+    font-size:24px;
+
+    color:#666;
+
+    margin-bottom:35px;
+
+    font-weight:400;
+
+}
+
+/* 基本信息 */
+
+.info{
+
+    margin-bottom:35px;
+
+}
+
+.info p{
+
+    font-size:24px;
+
+    color:#555;
+
+    line-height:50px;
+
+}
+
+/* 标签 */
+
+.research{
+
+    display:flex;
+
+    flex-wrap:wrap;
+
+    gap:15px;
+
+    margin-bottom:50px;
+
+}
+
+.research span{
+
+    background:white;
+
+    padding:14px 24px;
+
+    border-radius:40px;
+
+    box-shadow:0 8px 20px rgba(0,0,0,.08);
+
+    transition:.35s;
+
+    cursor:pointer;
+
+}
+
+.research span:hover{
+
+    background:#2D6A4F;
+
+    color:white;
+
+    transform:translateY(-8px);
+
+}
+
+/* 数据 */
+
+.statistics{
+
+    display:flex;
+
+    gap:20px;
+
+}
+
+.item{
+
+    width:145px;
+
+    background:white;
+
+    border-radius:18px;
+
+    padding:22px;
+
+    text-align:center;
+
+    box-shadow:0 15px 30px rgba(0,0,0,.06);
+
+    transition:.35s;
+
+}
+
+.item:hover{
+
+    transform:translateY(-10px);
+
+}
+
+.item h2{
+
+    color:#2D6A4F;
+
+    margin-bottom:10px;
+
+}
+
+.item p{
+
+    color:#777;
+
+}
+
+/* ===========================
+   右边
+=========================== */
+
+.hero-right{
+
+    width:80%;
+
+    display:flex;
+
+    justify-content:center;
+
+    position:relative;
+
+}
+
+.photo-card{
+
+    width:420px;
+
+    height:540px;
+
+    background:white;
+
+    border-radius:35px;
+
+    overflow:hidden;
+
+    box-shadow:0 30px 70px rgba(0,0,0,.12);
+
+    transition:.4s;
+
+}
+
+.photo-card:hover{
+
+    transform:translateY(-10px);
+
+}
+
+.photo-card img{
+
+    width:100%;
+
+    height:100%;
+
+    object-fit:cover;
+
+}
+
+/* ===========================
+   Scroll
+=========================== */
+
+.scroll{
+
+    position:absolute;
+
+    left:50%;
+
+    bottom:30px;
+
+    transform:translateX(-50%);
+
+    text-align:center;
+
+    color:#2D6A4F;
+
+    animation:float 2s infinite;
+
+}
+
+.scroll span{
+
+    font-size:28px;
+
+}
+
+.scroll p{
+
+    font-size:15px;
+
+    margin-top:5px;
+
+}
+
+@keyframes float{
+
+    0%{
+
+        transform:translate(-50%,0);
+
+    }
+
+    50%{
+
+        transform:translate(-50%,10px);
+
+    }
+
+    100%{
+
+        transform:translate(-50%,0);
+
+    }
+
+}
+/* 右侧整体 */
+.hero-right{
+    position: relative;
+}
+
+/* 校徽 */
+.school-logo{
+    position: absolute;
+
+    top: -170px;      /* 往上移动 */
+    left: 100%;        /* 放到头像中间 */
+    transform: translateX(-50%);
+
+    width: 200px;     /* 大小 */
+    height: auto;
+
+    z-index: 10;
+    pointer-events: none;
+}
+.about{
+
+    min-height:100vh;
+
+    background:#ffffff;
+
+    padding:120px 10%;
+
+}
+
+.about-title{
+
+    text-align:center;
+
+}
+
+.about-item{
+
+    display:grid;
+
+    grid-template-columns:150px 1fr;
+
+}
+/*==========================
+    第二页 About
+==========================*/
+
+.about{
+
+    min-height:100vh;
+
+    padding:120px 12%;
+
+    background:#f4fbf8;
+
+}
+
+.about-title{
+
+    text-align:center;
+
+    margin-bottom:60px;
+
+}
+
+.about-title span{
+
+    color:#52B788;
+
+    font-size:11px;
+
+    letter-spacing:2px;
+
+    text-transform:uppercase;
+
+}
+
+.about-title h2{
+
+    font-size:30px;
+
+    color:#1B4332;
+
+    margin-top:15px;
+
+}
+
+.about-content{
+
+    max-width:1000px;
+
+    margin:0 auto;
+
+}
+
+.about-content p{
+     font-family:"FangSong","STFangsong","仿宋",serif;
+
+    font-size:22px;
+
+    color:#555;
+
+    line-height:2.1;
+
+    text-align:justify;
+
+    text-indent:2em;
+
+}
+/*====================================
+    第三页 Research Projects
+====================================*/
+
+.projects{
+
+    min-height:100vh;
+
+    padding:120px 8%;
+
+    background:linear-gradient(180deg,#F4FBF8 0%,#FFFFFF 100%);
+
+}
+
+.projects-title{
+
+    text-align:center;
+
+    margin-bottom:80px;
+
+}
+
+.projects-title span{
+
+    font-size:18px;
+
+    color:#52B788;
+
+    letter-spacing:4px;
+
+    text-transform:uppercase;
+
+}
+
+.projects-title h2{
+
+    margin-top:18px;
+
+    font-size:52px;
+
+    color:#18392B;
+
+}
+
+.projects-title p{
+
+    margin-top:10px;
+
+    color:#888;
+
+    font-size:20px;
+
+}
+
+
+/* 三张卡片 */
+
+.project-list{
+
+    display:flex;
+
+    justify-content:center;
+
+    gap:45px;
+
+    flex-wrap:wrap;
+
+}
+
+
+/* 单张卡片 */
+
+.project-card{
+
+    position:relative;
+
+    width:380px;
+
+    min-height:470px;
+
+    padding:35px;
+
+    border-radius:30px;
+
+    background:rgba(255,255,255,.88);
+
+    backdrop-filter:blur(18px);
+
+    overflow:hidden;
+
+    transition:.45s;
+
+    cursor:pointer;
+
+    border:1px solid rgba(255,255,255,.6);
+
+    box-shadow:
+        0 15px 35px rgba(0,0,0,.08),
+        0 35px 70px rgba(0,0,0,.05);
+
+}
+
+
+/* 顶部绿色渐变 */
+
+.project-card::before{
+
+    content:"";
+
+    position:absolute;
+
+    top:0;
+
+    left:0;
+
+    width:100%;
+
+    height:8px;
+
+    background:linear-gradient(90deg,#2D6A4F,#52B788,#95D5B2);
+
+}
+
+
+/* 鼠标悬停 */
+
+.project-card:hover{
+
+    transform:
+        translateY(-18px)
+        rotateX(3deg);
+
+    box-shadow:
+        0 30px 70px rgba(45,106,79,.18),
+        0 50px 100px rgba(0,0,0,.12);
+
+}
+
+
+/* 鼠标绿色光 */
+
+.project-card::after{
+
+    content:"";
+
+    position:absolute;
+
+    width:240px;
+
+    height:240px;
+
+    background:radial-gradient(circle,
+    rgba(82,183,136,.20),
+    transparent 70%);
+
+    top:-120px;
+
+    right:-120px;
+
+    opacity:0;
+
+    transition:.45s;
+
+}
+
+.project-card:hover::after{
+
+    opacity:1;
+
+}
+
+
+/* 国家级、校级标签 */
+
+.project-tag{
+
+    display:inline-block;
+
+    padding:8px 18px;
+
+    border-radius:40px;
+
+    background:#E7F7EC;
+
+    color:#2D6A4F;
+
+    font-weight:700;
+
+    margin-bottom:28px;
+
+    font-size:15px;
+
+}
+
+
+/* 标题 */
+
+.project-card h3{
+
+    font-size:30px;
+
+    color:#173A2B;
+
+    line-height:1.45;
+
+    margin-bottom:25px;
+
+}
+
+
+/* 身份 */
+
+.project-role{
+
+    color:#2D6A4F;
+
+    font-size:18px;
+
+    font-weight:700;
+
+    margin-bottom:10px;
+
+}
+
+
+/* 时间 */
+
+.project-time{
+
+    color:#888;
+
+    margin-bottom:25px;
+
+}
+
+
+/* 简介 */
+
+.project-desc{
+
+    color:#666;
+
+    font-size:18px;
+
+    line-height:2;
+
+}
+
+
+/* 鼠标放上去文字一起上浮 */
+
+.project-card h3,
+.project-role,
+.project-time,
+.project-desc{
+
+    transition:.4s;
+
+}
+
+.project-card:hover h3,
+
+.project-card:hover .project-role,
+
+.project-card:hover .project-time,
+
+.project-card:hover .project-desc{
+
+    transform:translateY(-5px);
+
+}
+/*====================================
+        第四页 Publications
+====================================*/
+
+.publications{
+
+    min-height:100vh;
+
+    padding:120px 8%;
+
+    background:linear-gradient(180deg,#F4FBF8 0%,#FFFFFF 100%);
+
+}
+
+/* 标题 */
+
+.publications-title{
+
+    text-align:center;
+
+    margin-bottom:70px;
+
+}
+
+.publications-title span{
+
+    color:#52B788;
+
+    font-size:18px;
+
+    letter-spacing:3px;
+
+    text-transform:uppercase;
+
+}
+
+.publications-title h2{
+
+    font-size:50px;
+
+    color:#1B4332;
+
+    margin:15px 0;
+
+}
+
+.publications-title p{
+
+    color:#777;
+
+    font-size:18px;
+
+}
+
+
+/* 两张论文 */
+
+.paper-gallery{
+
+    display:flex;
+
+    justify-content:center;
+
+    gap:60px;
+
+    flex-wrap:wrap;
+
+}
+
+
+/* 单张卡片 */
+
+.paper-card{
+
+    width:500px;
+
+    background:#fff;
+
+    border-radius:28px;
+
+    overflow:hidden;
+
+    box-shadow:0 18px 45px rgba(0,0,0,.08);
+
+    transition:.4s;
+
+}
+
+
+/* 鼠标效果 */
+
+.paper-card:hover{
+
+    transform:translateY(-12px);
+
+    box-shadow:0 30px 60px rgba(0,0,0,.15);
+
+}
+
+
+/* 图片 */
+
+.paper-card img{
+
+    width:100%;
+
+    height:350px;
+
+    object-fit:cover;
+
+    transition:.5s;
+
+}
+
+.paper-card:hover img{
+
+    transform:scale(1.05);
+
+}
+
+
+/* 下面文字 */
+
+.paper-info{
+
+    padding:30px;
+
+}
+
+
+/* 期刊名称 */
+
+.paper-info h3{
+
+    font-size:30px;
+
+    color:#1B4332;
+
+    margin-bottom:12px;
+
+}
+
+
+/* SCI信息 */
+
+.paper-info p{
+
+    color:#666;
+
+    font-size:18px;
+
+    margin-bottom:10px;
+
+}
+
+
+/* 作者身份 */
+
+.paper-info span{
+
+    display:block;
+
+    color:#2D6A4F;
+
+    font-weight:600;
+
+    margin-bottom:22px;
+
+}
+
+
+/* 状态 */
+
+.paper-status{
+
+    display:inline-block;
+
+    padding:8px 20px;
+
+    border-radius:30px;
+
+    font-size:15px;
+
+    font-weight:bold;
+
+}
+
+
+/* 已发表 */
+
+.published{
+
+    background:#E7F7EC;
+
+    color:#2D6A4F;
+
+}
+
+
+/* 在审 */
+
+.review{
+
+    background:#FFF4D8;
+
+    color:#C68B00;
+
+}
+/*==================================
+      绘图展示 Research Figures
+==================================*/
+
+.figure-section{
+
+    padding:120px 8%;
+
+    background:linear-gradient(180deg,#f8fffc 0%,#eef8f3 100%);
+
+}
+
+/* 标题 */
+
+.section-title{
+
+    text-align:center;
+
+    margin-bottom:70px;
+
+}
+
+.section-title span{
+
+    font-size:18px;
+
+    color:#52B788;
+
+    letter-spacing:3px;
+
+    text-transform:uppercase;
+
+}
+
+.section-title h2{
+
+    margin-top:15px;
+
+    font-size:52px;
+
+    color:#173f33;
+
+    font-weight:700;
+
+}
+
+/* 每篇论文 */
+
+.paper-folder{
+
+    background:#ffffff;
+
+    border-radius:30px;
+
+    padding:35px 40px;
+
+    margin-bottom:50px;
+
+    box-shadow:0 18px 45px rgba(0,0,0,.08);
+
+    transition:.35s;
+
+}
+
+.paper-folder:hover{
+
+    transform:translateY(-5px);
+
+    box-shadow:0 25px 55px rgba(0,0,0,.12);
+
+}
+
+/* summary */
+
+.paper-folder summary{
+
+    display:flex;
+
+    justify-content:space-between;
+
+    align-items:center;
+
+    cursor:pointer;
+
+    list-style:none;
+
+    user-select:none;
+
+}
+
+.paper-folder summary::-webkit-details-marker{
+
+    display:none;
+
+}
+
+/* 左边 */
+
+.folder-left{
+
+    display:flex;
+
+    align-items:center;
+
+    gap:20px;
+
+}
+
+.folder-icon{
+
+    font-size:42px;
+
+}
+
+.folder-info h3{
+
+    font-size:28px;
+
+    color:#214b3c;
+
+    margin-bottom:6px;
+
+}
+
+.folder-info p{
+
+    color:#777;
+
+    font-size:18px;
+
+}
+
+/* 右边提示 */
+
+.folder-state{
+
+    color:#52B788;
+
+    font-size:17px;
+
+}
+
+/* 图片区域 */
+
+.figure-grid{
+
+    margin-top:40px;
+
+    display:grid;
+
+    grid-template-columns:repeat(auto-fit,minmax(260px,1fr));
+
+    gap:28px;
+
+}
+
+/* 卡片 */
+
+.figure-card{
+
+    background:white;
+
+    border-radius:20px;
+
+    overflow:hidden;
+
+    box-shadow:0 10px 28px rgba(0,0,0,.08);
+
+    transition:.35s;
+
+    cursor:pointer;
+
+}
+
+.figure-card:hover{
+
+    transform:translateY(-10px) scale(1.03);
+
+    box-shadow:0 20px 45px rgba(0,0,0,.15);
+
+}
+
+/* 图片 */
+
+.figure-card img{
+
+    width:100%;
+
+    height:280px;
+
+    object-fit:contain;
+
+    background:#ffffff;
+
+    padding:14px;
+
+    transition:.35s;
+
+}
+
+.figure-card:hover img{
+
+    transform:scale(1.05);
+
+}
+
+/* 标题 */
+
+.figure-card p{
+
+    padding:18px;
+
+    text-align:center;
+
+    font-size:19px;
+
+    color:#214b3c;
+
+    font-weight:600;
+
+    border-top:1px solid #ececec;
+
+}
+
+/* 响应式 */
+
+@media(max-width:1200px){
+
+.figure-grid{
+
+grid-template-columns:repeat(3,1fr);
+
+}
+
+}
+
+@media(max-width:900px){
+
+.figure-grid{
+
+grid-template-columns:repeat(2,1fr);
+
+}
+
+}
+
+@media(max-width:600px){
+
+.figure-grid{
+
+grid-template-columns:1fr;
+
+}
+
+.section-title h2{
+
+font-size:38px;
+
+}
+
+.folder-info h3{
+
+font-size:22px;
+
+}
+
+}
